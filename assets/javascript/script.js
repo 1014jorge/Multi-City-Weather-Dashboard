@@ -1,0 +1,1 @@
+var weatherAPI = aed97915b0e1e75acefce00314eef350
