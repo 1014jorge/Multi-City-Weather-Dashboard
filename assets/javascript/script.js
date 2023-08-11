@@ -1,5 +1,4 @@
-
-
+const btnHolderEl = document.getElementById('btnHolder');
 
 
 var cityLocalStorage;
@@ -75,9 +74,29 @@ const saveToLocalStorage = function (cityName) {
         pastSearches = JSON.parse(localStorage.getItem('pastSearches'))
     }
     pastSearches.push(cityName);
-    localStorage.setItem('pastSearches',JSON.stringify(pastSearches));
+    localStorage.setItem('pastSearches', JSON.stringify(pastSearches));
 };
-const getCityCoordinates = () => {
+// var counter = 0
+// function createButton() {
+//     var btn = document.createElement (button);
+//     btn.
+// }
+
+function view() {
+    if (localStorage.getitem('pastSearches') === ! null) {
+        pastSearches = [];
+    }
+    pastSearches = JSON.parse(localStorage.getItem('pastSearches'));
+    for (let i = 0; i < pastSearches.length; i++) {
+        var historySearch = document.createElement("button");
+        historySearch.textContent = pastSearches[i];
+        historySearch.setAttribute('class', 'search-btn');
+        btnHolderEl.appendChild(historySearch);
+    }
+}
+view();
+
+function getCityCoordinates() {
     const cityName = cityInput.value.trim();
     if (cityName === "") return;
     saveToLocalStorage(cityName);
@@ -94,6 +113,11 @@ const getCityCoordinates = () => {
 }
 
 
+
+btnHolderEl.addEventListener("click", function (event) {
+    cityInput.value = event.target.textContent;
+    getCityCoordinates(cityInput.value);
+})
 
 
 searchButton.addEventListener("click", getCityCoordinates);
