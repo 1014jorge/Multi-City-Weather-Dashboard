@@ -9,41 +9,67 @@
 </head>
 
 <body>
-    <div class="card">
-        <div class="search">
-            <input type="text" placeholder="enter city name" spellcheck="false">
-            <button><img src="./assets/img/icons8-search-24.png">
 
-            </button>
+    <h1>Multi-City Weather Dashboard</h1>
+    <div class="container">
+        <div class="weather-input">
+            <h3>Enter a City Name</h3>
+            <input class="city-input" type="text" placeholder="Ex. New York, Riverside, Tokyo">
+            <button class="search-btn">Search</button>
+            <div class="separator"></div>
+
         </div>
-        <div class="weather">
-            <img src="./assets/img/icons8-cloud-lightning-100-2.png" class="weather-icon">
-            <h1 class="temp">86°F</h1>
-            <h2 class="city">Riverside</h2>
-            <div class="details">
-                <div class="col">
-                    <img src="./assets/img/icons8-humidity-48.png">
-                    <div>
-                        <p class="Humidity">50%</p>
-                        <p>Humidity</p>
-                    </div>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>_______ ( ______ )</h2>
+                    <h6>Temperature: __°F</h6>
+                    <h6>Wind: __ mph</h6>
+                    <h6>Humidity: __%</h6>
                 </div>
             </div>
-            <div class="col">
-                <img src="./assets/img/icons8-night-wind-50.png">
-                <div>
-                    <p class="wind">15 mph</p>
-                    <p>Wind Speed</p>
-                </div>
+            <div class="days-forecast">
+                <h2>5-Day Forecast</h2>
+                <ul class="weather-cards">
+                    <li class="card">
+                        <h3>( ______ )</h3>
+                        <h6>Temp: __°F</h6>
+                        <h6>Wind: __ mph</h6>
+                        <h6>Humidity: __%</h6>
+                    </li>
+                    <li class="card">
+                        <h3>( ______ )</h3>
+                        <h6>Temp: __°F</h6>
+                        <h6>Wind: __ mph</h6>
+                        <h6>Humidity: __%</h6>
+                    </li>
+                    <li class="card">
+                        <h3>( ______ )</h3>
+                        <h6>Temp: __°F</h6>
+                        <h6>Wind: __ mph</h6>
+                        <h6>Humidity: __%</h6>
+                    </li>
+                    <li class="card">
+                        <h3>( ______ )</h3>
+                        <h6>Temp: __°F</h6>
+                        <h6>Wind: __ mph</h6>
+                        <h6>Humidity: __%</h6>
+                    </li>
+                    <li class="card">
+                        <h3>( ______ )</h3>
+                        <h6>Temp: __°F</h6>
+                        <h6>Wind: __ mph</h6>
+                        <h6>Humidity: __%</h6>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    </div>
-    <script>
+    <script src="./assets/javascript/script.js">
 
-    <script src="./assets/javascript/script.js"></script>
-    
     </script>
+
+
 </body>
 
 </html>
