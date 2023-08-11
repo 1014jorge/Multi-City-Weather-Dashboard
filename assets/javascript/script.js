@@ -76,24 +76,21 @@ const saveToLocalStorage = function (cityName) {
     pastSearches.push(cityName);
     localStorage.setItem('pastSearches', JSON.stringify(pastSearches));
 };
-// var counter = 0
-// function createButton() {
-//     var btn = document.createElement (button);
-//     btn.
-// }
-
+//function for local storage and past searches
 function view() {
-    if (localStorage.getitem('pastSearches') === ! null) {
+    if (localStorage.getItem('pastSearches') === null) {
+
         pastSearches = [];
-    }
-    pastSearches = JSON.parse(localStorage.getItem('pastSearches'));
+    } else pastSearches = JSON.parse(localStorage.getItem('pastSearches'));
     for (let i = 0; i < pastSearches.length; i++) {
         var historySearch = document.createElement("button");
         historySearch.textContent = pastSearches[i];
         historySearch.setAttribute('class', 'search-btn');
         btnHolderEl.appendChild(historySearch);
+        
     }
 }
+
 view();
 
 function getCityCoordinates() {
@@ -113,11 +110,9 @@ function getCityCoordinates() {
 }
 
 
-
+// evenlisteners for search button and buttons created after refresh 
 btnHolderEl.addEventListener("click", function (event) {
     cityInput.value = event.target.textContent;
     getCityCoordinates(cityInput.value);
 })
-
-
 searchButton.addEventListener("click", getCityCoordinates);
