@@ -8,9 +8,10 @@ Created a multi city weather app that give you the current weather and a five-da
 # Link to Git Hub
 https://github.com/1014jorge/Multi-City-Weather-Dashboard
 
+# Link to Weather App
+https://1014jorge.github.io/Multi-City-Weather-Dashboard/
 
 
 
-
-# BUGS
+# bugs
 all cities typed in save to local storage but to search previous cities searched, you must refresh web page and the buttons pop under search button. search funtionality of previous searches still work.
